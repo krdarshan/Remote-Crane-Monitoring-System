@@ -1,0 +1,293 @@
+@import '../styles/shared.css';
+
+.alerts-container {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.alerts-header {
+  margin-bottom: 2rem;
+}
+
+.alerts-header h1 {
+  font-size: 1.75rem;
+  color: #2d3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.alerts-header p {
+  color: #718096;
+  margin: 0;
+}
+
+.alerts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 1.5rem;
+}
+
+.alert-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.alert-header {
+  margin-bottom: 1rem;
+}
+
+.alert-id-priority {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.alert-id {
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.priority-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.priority-badge.high {
+  background-color: #FED7D7;
+  color: #9B2C2C;
+}
+
+.priority-badge.medium {
+  background-color: #FEFCBF;
+  color: #975A16;
+}
+
+.priority-badge.low {
+  background-color: #C6F6D5;
+  color: #276749;
+}
+
+.alert-title {
+  font-size: 1.25rem;
+  color: #2D3748;
+  margin: 0 0 0.5rem 0;
+}
+
+.alert-description {
+  color: #718096;
+  font-size: 0.875rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+}
+
+.alert-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail-item .label {
+  color: #718096;
+  font-size: 0.75rem;
+}
+
+.detail-item .value {
+  color: #2D3748;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.alert-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: 1px solid #E2E8F0;
+  border-radius: 0.375rem;
+  background: white;
+  color: #4A5568;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-button:hover {
+  background-color: #F7FAFC;
+  border-color: #CBD5E0;
+}
+
+.action-button.view {
+  border-color: #4299E1;
+  color: #4299E1;
+}
+
+.action-button.view:hover {
+  background-color: #EBF8FF;
+}
+
+.action-button.update {
+  border-color: #48BB78;
+  color: #48BB78;
+}
+
+.action-button.update:hover {
+  background-color: #F0FFF4;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 0.5rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #2D3748;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #A0AEC0;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.detail-section {
+  margin-bottom: 2rem;
+}
+
+.detail-section h3 {
+  font-size: 1rem;
+  color: #2D3748;
+  margin: 0 0 1rem 0;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.modal-footer {
+  padding: 1.5rem;
+  border-top: 1px solid #E2E8F0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.action-button.delete {
+  border-color: #F56565;
+  color: #F56565;
+}
+
+.action-button.delete:hover {
+  background-color: #FFF5F5;
+}
+
+.action-button.secondary {
+  border-color: #CBD5E0;
+  color: #4A5568;
+}
+
+/* Notification Styles */
+.notification {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 1rem;
+  border-radius: 0.375rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  animation: slideIn 0.3s ease-out;
+}
+
+.notification.success {
+  border-left: 4px solid #48BB78;
+}
+
+.notification.error {
+  border-left: 4px solid #F56565;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .alerts-container {
+    padding: 1rem;
+  }
+
+  .alerts-list {
+    grid-template-columns: 1fr;
+  }
+
+  .alert-details {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    width: 95%;
+    margin: 1rem;
+  }
+
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+} 

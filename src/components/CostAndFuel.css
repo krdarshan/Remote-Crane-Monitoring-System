@@ -1,0 +1,133 @@
+.cost-fuel-page {
+  padding: 2rem;
+}
+
+.cost-fuel-header {
+  margin-bottom: 2rem;
+}
+
+.cost-fuel-header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.cost-fuel-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.cost-fuel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.summary-card,
+.cost-breakdown-card,
+.fuel-consumption-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card h3,
+.cost-breakdown-card h3,
+.fuel-consumption-card h3 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c5282;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #666;
+  font-size: 0.875rem;
+}
+
+.cost-items,
+.consumption-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.cost-item,
+.consumption-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cost-info,
+.crane-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cost-category,
+.crane-name {
+  color: #4a5568;
+  font-size: 0.875rem;
+}
+
+.cost-amount,
+.consumption-value {
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #edf2f7;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4299e1;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cost-fuel-page {
+    padding: 1rem;
+  }
+
+  .cost-fuel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-stats {
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  }
+
+  .stat-value {
+    font-size: 1.25rem;
+  }
+} 

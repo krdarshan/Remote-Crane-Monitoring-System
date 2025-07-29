@@ -1,0 +1,284 @@
+.map-container {
+  position: relative;
+  height: calc(100vh - 64px);
+  width: 100%;
+}
+
+.map-view {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 2rem);
+  margin: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.map-controls {
+  padding: 1rem;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.map-controls h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 1rem;
+}
+
+.status-filter {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 0.875rem;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.map-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.weather-overlay {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.weather-overlay h3 {
+  font-size: 1rem;
+  color: #2d3436;
+  margin: 0 0 0.5rem 0;
+}
+
+.weather-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+}
+
+.weather-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #636e72;
+}
+
+.weather-info i {
+  color: #0984e3;
+}
+
+/* Custom Marker Styles */
+.custom-marker {
+  width: 30px;
+  height: 30px;
+}
+
+.marker-pin {
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 50%;
+  top: 50%;
+  margin: -15px 0 0 -15px;
+}
+
+.custom-marker.operational .marker-pin {
+  background: #48bb78;
+}
+
+.custom-marker.maintenance .marker-pin {
+  background: #ecc94b;
+}
+
+.custom-marker.critical .marker-pin {
+  background: #f56565;
+}
+
+/* Popup Styles */
+.crane-popup {
+  padding: 1rem;
+  min-width: 200px;
+}
+
+.crane-popup h3 {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  margin-bottom: 0.75rem;
+}
+
+.status-badge.operational {
+  background-color: #c6f6d5;
+  color: #22543d;
+}
+
+.status-badge.maintenance {
+  background-color: #fefcbf;
+  color: #744210;
+}
+
+.status-badge.critical {
+  background-color: #fed7d7;
+  color: #822727;
+}
+
+.popup-details p {
+  margin: 0.25rem 0;
+  font-size: 0.875rem;
+  color: #4a5568;
+}
+
+.view-details-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.view-details-btn:hover {
+  background-color: #3182ce;
+}
+
+/* Crane Details Panel */
+.crane-details-panel {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.crane-details-panel h2 {
+  margin: 0 0 1rem 0;
+  color: #2d3748;
+  font-size: 1.25rem;
+}
+
+.status-indicator {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.details-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detail-item .label {
+  color: #718096;
+  font-size: 0.875rem;
+}
+
+.detail-item .value {
+  color: #2d3748;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.action-buttons {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.action-btn {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-btn.primary {
+  background-color: #4299e1;
+  color: white;
+}
+
+.action-btn.primary:hover {
+  background-color: #3182ce;
+}
+
+.action-btn.secondary {
+  background-color: #edf2f7;
+  color: #2d3748;
+}
+
+.action-btn.secondary:hover {
+  background-color: #e2e8f0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .map-view {
+    margin: 0;
+    height: 100vh;
+    border-radius: 0;
+  }
+
+  .map-controls {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: stretch;
+  }
+
+  .crane-details-panel {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: auto;
+    width: auto;
+    border-radius: 8px 8px 0 0;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+} 
